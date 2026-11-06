@@ -1,0 +1,854 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça o ENEM, sua importância, estrutura, redação, formas de ingresso no ensino superior e dicas de preparação.">
+  <title>ENEM — Conhecimento que abre caminhos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --creme: #fefbe8;
+      --creme-claro: #fffdf2;
+      --creme-escuro: #eee4cc;
+      --marrom: #4a3729;
+      --marrom-medio: #705748;
+      --marrom-claro: #9a8175;
+      --rosa-marrom: #8a7168;
+      --bege: #d8c9b8;
+      --sombra: rgba(74, 55, 41, 0.13);
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--creme);
+      color: var(--marrom);
+      font-family: 'Montserrat', Arial, sans-serif;
+      line-height: 1.75;
+    }
+
+    header {
+      background: linear-gradient(135deg, #eee4cc, #f8efd9);
+      text-align: center;
+      padding: 62px 20px 52px;
+      border-bottom: 1px solid var(--bege);
+    }
+
+    header .selo {
+      display: inline-block;
+      border: 1px solid var(--marrom-claro);
+      border-radius: 30px;
+      padding: 5px 16px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      line-height: 1.25;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 65px);
+      margin: 18px 0 12px;
+    }
+
+    header p {
+      max-width: 720px;
+      margin: auto;
+      color: var(--marrom-medio);
+      font-size: 16px;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: var(--creme-claro);
+      border-bottom: 1px solid var(--bege);
+      box-shadow: 0 3px 12px var(--sombra);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 5px;
+      padding: 10px;
+    }
+
+    nav a {
+      color: var(--marrom);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 9px 12px;
+      border-radius: 20px;
+      transition: .2s;
+    }
+
+    nav a:hover {
+      background: var(--creme-escuro);
+      color: var(--rosa-marrom);
+    }
+
+    main {
+      max-width: 1120px;
+      margin: auto;
+      padding: 28px 20px 65px;
+    }
+
+    section {
+      scroll-margin-top: 85px;
+      margin: 30px 0;
+    }
+
+    .secao-titulo {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .secao-titulo .numero {
+      color: var(--marrom-claro);
+      letter-spacing: 3px;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: clamp(27px, 4vw, 38px);
+      margin: 5px 0 8px;
+    }
+
+    .linha {
+      width: 62px;
+      height: 3px;
+      background: var(--marrom-claro);
+      margin: 12px auto;
+      border-radius: 5px;
+    }
+
+    p {
+      margin: 10px 0;
+    }
+
+    .intro, .card, .info, .passo, .quote, .faq-item {
+      background: var(--creme-claro);
+      border: 1px solid var(--bege);
+      border-radius: 14px;
+      box-shadow: 0 5px 16px var(--sombra);
+    }
+
+    .intro {
+      padding: 26px;
+      font-size: 16px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 17px;
+    }
+
+    .grid.quatro {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .card {
+      padding: 21px;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 9px 20px var(--sombra);
+    }
+
+    .card h3 {
+      font-size: 21px;
+      margin: 0 0 8px;
+    }
+
+    .icone {
+      font-size: 25px;
+      margin-bottom: 6px;
+    }
+
+    .card p, .info p {
+      color: #665447;
+      font-size: 14px;
+    }
+
+    .info {
+      padding: 22px;
+      margin: 18px 0;
+    }
+
+    .info strong {
+      color: var(--marrom);
+    }
+
+    .destaque {
+      background: #eee4cc;
+      border-left: 5px solid var(--marrom-claro);
+      padding: 17px 20px;
+      border-radius: 8px;
+      margin: 18px 0;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    li {
+      margin: 7px 0;
+    }
+
+    .lista-colunas {
+      columns: 2;
+      column-gap: 35px;
+    }
+
+    .passos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .passo {
+      padding: 19px;
+    }
+
+    .passo b {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      margin-bottom: 5px;
+    }
+
+    .quote {
+      text-align: center;
+      padding: 28px;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 25px;
+      font-weight: 600;
+      color: var(--marrom-medio);
+    }
+
+    .faq-item {
+      margin: 11px 0;
+      overflow: hidden;
+    }
+
+    .faq-pergunta {
+      width: 100%;
+      border: 0;
+      background: transparent;
+      color: var(--marrom);
+      text-align: left;
+      padding: 17px 20px;
+      font: 700 15px 'Montserrat', sans-serif;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .faq-resposta {
+      display: none;
+      padding: 0 20px 17px;
+      color: #665447;
+      font-size: 14px;
+    }
+
+    .faq-item.aberto .faq-resposta {
+      display: block;
+    }
+
+    .faq-item.aberto .mais {
+      transform: rotate(45deg);
+    }
+
+    .mais {
+      transition: .2s;
+      font-size: 20px;
+    }
+
+    .botao {
+      display: inline-block;
+      background: var(--marrom);
+      color: var(--creme);
+      text-decoration: none;
+      padding: 12px 22px;
+      border: 2px solid var(--bege);
+      border-radius: 28px;
+      font-weight: 700;
+      font-size: 13px;
+      transition: .2s;
+    }
+
+    .botao:hover {
+      background: var(--marrom-medio);
+      transform: translateY(-2px);
+    }
+
+    .centralizado {
+      text-align: center;
+    }
+
+    footer {
+      background: var(--marrom);
+      color: var(--creme);
+      text-align: center;
+      padding: 30px 18px;
+    }
+
+    footer p {
+      margin: 5px;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: var(--creme-escuro);
+    }
+
+    #topo {
+      position: fixed;
+      bottom: 18px;
+      right: 18px;
+      border: 0;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      background: var(--marrom);
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px var(--sombra);
+      display: none;
+    }
+
+    @media (max-width: 800px) {
+      .grid.quatro {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .passos {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 45px 17px;
+      }
+
+      nav {
+        position: static;
+      }
+
+      nav a {
+        font-size: 11px;
+        padding: 7px 9px;
+      }
+
+      .grid, .grid.quatro {
+        grid-template-columns: 1fr;
+      }
+
+      .lista-colunas {
+        columns: 1;
+      }
+
+      main {
+        padding-left: 14px;
+        padding-right: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header id="inicio">
+    <span class="selo">Educação • Oportunidades • Futuro</span>
+    <h1>ENEM: conhecimento que abre caminhos</h1>
+    <p>Entenda como funciona o Exame Nacional do Ensino Médio, por que ele é importante e como pode ajudar a construir seus próximos passos.</p>
+  </header>
+
+  <nav aria-label="Navegação principal">
+    <a href="#sobre">O que é</a>
+    <a href="#importancia">Importância</a>
+    <a href="#estrutura">Estrutura</a>
+    <a href="#redacao">Redação</a>
+    <a href="#notas">Notas e TRI</a>
+    <a href="#oportunidades">Oportunidades</a>
+    <a href="#preparacao">Preparação</a>
+    <a href="#faq">Dúvidas</a>
+  </nav>
+
+  <main>
+
+    <!-- 01 - O QUE É O ENEM -->
+    <section id="sobre">
+      <div class="secao-titulo">
+        <span class="numero">01 • CONHECENDO O EXAME</span>
+        <h2>O que é o ENEM?</h2>
+        <div class="linha"></div>
+      </div>
+
+      <div class="intro">
+        O <strong>Exame Nacional do Ensino Médio (ENEM)</strong> é uma avaliação educacional brasileira, criada em 1998 e organizada pelo Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep). Seu objetivo inicial era avaliar o desempenho dos estudantes ao final da educação básica. Com o passar dos anos, o exame ganhou uma função muito importante: tornou-se uma das principais formas de acesso ao ensino superior no Brasil.
+
+        <p>Milhões de participantes utilizam seus resultados para concorrer a vagas em universidades públicas e privadas, participar de programas de bolsas e buscar oportunidades de estudo. O ENEM também permite que o estudante avalie seus conhecimentos e identifique assuntos que precisam ser aprimorados.</p>
+      </div>
+
+      <div class="destaque">
+        <strong>Em resumo:</strong> o ENEM é mais do que uma prova. É uma oportunidade de demonstrar conhecimentos, ampliar possibilidades de formação e planejar o futuro acadêmico e profissional.
+      </div>
+    </section>
+
+    <!-- 02 - IMPORTANCIA -->
+    <section id="importancia">
+      <div class="secao-titulo">
+        <span class="numero">02 • POR QUE ELE É IMPORTANTE?</span>
+        <h2>A importância do ENEM</h2>
+        <div class="linha"></div>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <div class="icone">🎓</div>
+          <h3>Acesso ao ensino superior</h3>
+          <p>A nota pode ser utilizada em processos seletivos de universidades e instituições de ensino superior, conforme as regras de cada instituição.</p>
+        </article>
+
+        <article class="card">
+          <div class="icone">🌱</div>
+          <h3>Mais oportunidades</h3>
+          <p>O exame pode abrir caminhos para cursos, bolsas de estudo e programas que ajudam estudantes a continuar sua formação.</p>
+        </article>
+
+        <article class="card">
+          <div class="icone">📚</div>
+          <h3>Revisão da aprendizagem</h3>
+          <p>Ao estudar para o ENEM, o estudante revisa conteúdos de diferentes áreas e desenvolve interpretação, raciocínio e argumentação.</p>
+        </article>
+
+        <article class="card">
+          <div class="icone">🧭</div>
+          <h3>Planejamento do futuro</h3>
+          <p>A preparação incentiva o aluno a pesquisar profissões, conhecer cursos e refletir sobre seus interesses e objetivos.</p>
+        </article>
+
+        <article class="card">
+          <div class="icone">⚖️</div>
+          <h3>Possibilidade de acesso mais amplo</h3>
+          <p>O exame integra políticas de acesso à educação superior e pode contribuir para que estudantes de diferentes realidades disputem vagas.</p>
+        </article>
+
+        <article class="card">
+          <div class="icone">💡</div>
+          <h3>Desenvolvimento de habilidades</h3>
+          <p>Além de memorizar conteúdos, é necessário interpretar textos, analisar situações, relacionar informações e resolver problemas.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 03 - ESTRUTURA -->
+    <section id="estrutura">
+      <div class="secao-titulo">
+        <span class="numero">03 • COMO A PROVA É ORGANIZADA</span>
+        <h2>A estrutura do ENEM</h2>
+        <div class="linha"></div>
+      </div>
+
+      <p>O exame é aplicado em dois dias. A estrutura tradicional possui quatro provas objetivas, com questões de múltipla escolha, e uma redação. A organização, os horários e as regras devem sempre ser conferidos no edital da edição correspondente.</p>
+
+      <div class="grid quatro">
+        <article class="card">
+          <h3>Linguagens</h3>
+          <p>Português, literatura, língua estrangeira (inglês ou espanhol, conforme a opção), artes, educação física e tecnologias da comunicação.</p>
+        </article>
+
+        <article class="card">
+          <h3>Ciências Humanas</h3>
+          <p>História, geografia, filosofia e sociologia, com questões sobre sociedade, cultura, política, espaço e relações humanas.</p>
+        </article>
+
+        <article class="card">
+          <h3>Ciências da Natureza</h3>
+          <p>Biologia, química e física, abordando fenômenos naturais, saúde, ambiente, energia e aplicações científicas.</p>
+        </article>
+
+        <article class="card">
+          <h3>Matemática</h3>
+          <p>Matemática e suas aplicações, incluindo números, porcentagem, geometria, estatística, funções, medidas e resolução de problemas.</p>
+        </article>
+      </div>
+
+      <div class="info">
+        <strong>Redação:</strong> além das questões objetivas, o participante produz um texto dissertativo-argumentativo sobre um tema de ordem social, científica, cultural ou política. A proposta exige defesa de um ponto de vista e respeito aos direitos humanos.
+      </div>
+
+      <div class="destaque">
+        Na aplicação tradicional, são 180 questões objetivas ao todo, distribuídas entre os dois dias, além da redação. Consulte o edital oficial para confirmar a organização da edição em que você participará.
+      </div>
+    </section>
+
+    <!-- 04 - REDACAO -->
+    <section id="redacao">
+      <div class="secao-titulo">
+        <span class="numero">04 • UMA PARTE FUNDAMENTAL</span>
+        <h2>A redação do ENEM</h2>
+        <div class="linha"></div>
+      </div>
+
+      <div class="intro">
+        A redação costuma ser um dos momentos mais importantes do exame. O participante deve escrever um texto dissertativo-argumentativo, geralmente com introdução, desenvolvimento e conclusão, apresentando uma tese, argumentos consistentes e uma proposta de intervenção relacionada ao problema discutido.
+      </div>
+
+      <h3>As cinco competências avaliadas</h3>
+
+      <div class="grid">
+        <article class="card">
+          <h3>1. Domínio da escrita formal</h3>
+          <p>Demonstrar domínio da modalidade escrita formal da língua portuguesa, respeitando a gramática e a organização do texto.</p>
+        </article>
+
+        <article class="card">
+          <h3>2. Compreensão do tema</h3>
+          <p>Compreender a proposta, desenvolver o tema e utilizar conhecimentos de diferentes áreas sem fugir do assunto.</p>
+        </article>
+
+        <article class="card">
+          <h3>3. Organização dos argumentos</h3>
+          <p>Selecionar, relacionar e organizar informações, fatos e opiniões para defender um ponto de vista.</p>
+        </article>
+
+        <article class="card">
+          <h3>4. Coesão textual</h3>
+          <p>Utilizar mecanismos linguísticos que conectem as ideias e garantam continuidade e clareza ao texto.</p>
+        </article>
+
+        <article class="card">
+          <h3>5. Proposta de intervenção</h3>
+          <p>Apresentar uma solução para o problema, com respeito aos direitos humanos e elementos que expliquem a ação proposta.</p>
+        </article>
+
+        <article class="card">
+          <h3>O que evitar</h3>
+          <p>Fugir do tema, escrever em formato inadequado, copiar os textos motivadores ou desrespeitar os direitos humanos.</p>
+        </article>
+      </div>
+
+      <div class="destaque">
+        <strong>Dica:</strong> praticar redações, ler textos variados e acompanhar assuntos da atualidade ajuda a ampliar o repertório e a desenvolver argumentos. É importante treinar também a revisão do texto.
+      </div>
+    </section>
+
+    <!-- 05 - NOTAS -->
+    <section id="notas">
+      <div class="secao-titulo">
+        <span class="numero">05 • ENTENDENDO O RESULTADO</span>
+        <h2>Como funciona a nota do ENEM?</h2>
+        <div class="linha"></div>
+      </div>
+
+      <p>O resultado é apresentado por área de conhecimento e pela redação. Nas provas objetivas, o cálculo utiliza a <strong>Teoria de Resposta ao Item (TRI)</strong>, um método que considera características das questões e o padrão de respostas do participante.</p>
+
+      <div class="grid">
+        <article class="card">
+          <h3>O que é a TRI?</h3>
+          <p>É uma metodologia estatística que considera, entre outros aspectos, a dificuldade das questões e a coerência do conjunto de respostas. Por isso, a nota não depende apenas da quantidade de acertos.</p>
+        </article>
+
+        <article class="card">
+          <h3>Por que dois participantes podem ter notas diferentes?</h3>
+          <p>Mesmo com o mesmo número de acertos, os resultados podem variar conforme as questões acertadas e o padrão de respostas de cada participante.</p>
+        </article>
+      </div>
+
+      <div class="info">
+        <strong>Atenção:</strong> não existe uma nota única que garanta aprovação em todos os cursos. Cada seleção pode estabelecer pesos, notas de corte e critérios próprios. É necessário consultar as regras do curso e da instituição desejada.
+      </div>
+    </section>
+
+    <!-- 06 - OPORTUNIDADES -->
+    <section id="oportunidades">
+      <div class="secao-titulo">
+        <span class="numero">06 • O QUE A NOTA PODE PROPORCIONAR</span>
+        <h2>Oportunidades depois do ENEM</h2>
+        <div class="linha"></div>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Sisu</h3>
+          <p>O Sistema de Seleção Unificada reúne vagas de instituições públicas de ensino superior que participam do processo. Os candidatos concorrem utilizando resultados do ENEM aceitos pelas regras da edição.</p>
+        </article>
+
+        <article class="card">
+          <h3>Prouni</h3>
+          <p>O Programa Universidade para Todos oferece bolsas de estudo integrais e parciais em instituições privadas. Há critérios de participação, desempenho e renda que precisam ser verificados no edital.</p>
+        </article>
+
+        <article class="card">
+          <h3>Fies</h3>
+          <p>O Fundo de Financiamento Estudantil oferece financiamento para cursos superiores em instituições privadas participantes, conforme requisitos e condições definidos pelo programa.</p>
+        </article>
+
+        <article class="card">
+          <h3>Seleções próprias e outras oportunidades</h3>
+          <p>Algumas universidades utilizam a nota do ENEM em processos seletivos próprios. Também existem instituições portuguesas conveniadas que aceitam resultados do exame, de acordo com suas regras.</p>
+        </article>
+      </div>
+
+      <div class="destaque">
+        Os programas podem mudar seus critérios, prazos e formas de inscrição. A nota do ENEM não representa aprovação automática: é preciso acompanhar os editais e realizar a inscrição dentro do período estabelecido.
+      </div>
+    </section>
+
+    <!-- 07 - PREPARACAO -->
+    <section id="preparacao">
+      <div class="secao-titulo">
+        <span class="numero">07 • ORGANIZAÇÃO E ESTUDO</span>
+        <h2>Como se preparar para o ENEM?</h2>
+        <div class="linha"></div>
+      </div>
+
+      <p>Uma boa preparação não depende apenas de estudar muitas horas. Organização, constância, revisão e descanso também fazem parte do processo.</p>
+
+      <div class="passos">
+        <div class="passo">
+          <b>01. Planeje</b>
+          Monte um cronograma realista, distribuindo as matérias ao longo da semana e reservando tempo para revisar.
+        </div>
+
+        <div class="passo">
+          <b>02. Conheça a prova</b>
+          Resolva questões de edições anteriores para entender os enunciados, os temas recorrentes e o estilo das perguntas.
+        </div>
+
+        <div class="passo">
+          <b>03. Revise os conteúdos</b>
+          Faça resumos, mapas mentais, exercícios e revisões periódicas para fortalecer o aprendizado.
+        </div>
+
+        <div class="passo">
+          <b>04. Pratique redação</b>
+          Escreva textos, estude as competências e peça correções para identificar pontos de melhoria.
+        </div>
+
+        <div class="passo">
+          <b>05. Acompanhe atualidades</b>
+          Leia notícias de fontes confiáveis e procure compreender diferentes perspectivas sobre temas sociais.
+        </div>
+
+        <div class="passo">
+          <b>06. Cuide do bem-estar</b>
+          Tenha momentos de descanso, alimentação adequada e sono suficiente. Evite comparar seu ritmo com o de outras pessoas.
+        </div>
+      </div>
+
+      <h3>Exemplo de organização semanal</h3>
+
+      <div class="info">
+        <ul class="lista-colunas">
+          <li><strong>Segunda:</strong> Linguagens e redação.</li>
+          <li><strong>Terça:</strong> Matemática.</li>
+          <li><strong>Quarta:</strong> Ciências da Natureza.</li>
+          <li><strong>Quinta:</strong> Ciências Humanas.</li>
+          <li><strong>Sexta:</strong> revisão dos conteúdos.</li>
+          <li><strong>Sábado:</strong> questões e simulado.</li>
+          <li><strong>Domingo:</strong> descanso ou leitura leve.</li>
+        </ul>
+
+        <p><small>Esse é apenas um exemplo. O cronograma deve ser adaptado à rotina, às dificuldades e aos objetivos de cada estudante.</small></p>
+      </div>
+    </section>
+
+    <!-- 08 - DIA DA PROVA -->
+    <section id="dia-prova">
+      <div class="secao-titulo">
+        <span class="numero">08 • NO DIA DO EXAME</span>
+        <h2>Cuidados importantes</h2>
+        <div class="linha"></div>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Antes de sair</h3>
+          <ul>
+            <li>Confira o local e o horário no Cartão de Confirmação.</li>
+            <li>Organize com antecedência os documentos exigidos.</li>
+            <li>Verifique no edital os materiais permitidos.</li>
+            <li>Planeje o transporte e saia com antecedência.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Durante a prova</h3>
+          <ul>
+            <li>Leia as instruções com atenção.</li>
+            <li>Administre o tempo e acompanhe o preenchimento do cartão-resposta.</li>
+            <li>Comece pelas questões que conseguir resolver com mais tranquilidade.</li>
+            <li>Reserve tempo para a redação e para revisar o que for possível.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="info">
+        <strong>Importante:</strong> documentos aceitos, itens permitidos, horários, procedimentos e regras de identificação são definidos no edital de cada edição. Consulte sempre as orientações oficiais do Inep.
+      </div>
+    </section>
+
+    <!-- 09 - ACESSIBILIDADE -->
+    <section id="inclusao">
+      <div class="secao-titulo">
+        <span class="numero">09 • EDUCAÇÃO PARA TODOS</span>
+        <h2>Acessibilidade e inclusão</h2>
+        <div class="linha"></div>
+      </div>
+
+      <div class="intro">
+        O ENEM prevê atendimento especializado e recursos de acessibilidade para participantes que se enquadram nos critérios estabelecidos. Dependendo da necessidade e da aprovação da solicitação, podem ser disponibilizados recursos como prova em formato acessível, auxílio especializado e tempo adicional.
+      </div>
+
+      <p>Para solicitar atendimento, é necessário seguir os procedimentos, prazos e documentação indicados no edital. A inclusão é essencial para que todos tenham condições mais adequadas de participar da avaliação.</p>
+    </section>
+
+    <!-- 10 - PERGUNTAS FREQUENTES -->
+    <section id="faq">
+      <div class="secao-titulo">
+        <span class="numero">10 • PERGUNTAS FREQUENTES</span>
+        <h2>Principais dúvidas sobre o ENEM</h2>
+        <div class="linha"></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-pergunta" aria-expanded="false">
+          Quem pode fazer o ENEM?
+          <span class="mais">+</span>
+        </button>
+        <div class="faq-resposta">
+          O exame pode ser feito por pessoas que já concluíram o ensino médio e por estudantes que ainda estão cursando. As condições para cada modalidade, inclusive a participação como treineiro, devem ser conferidas no edital.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-pergunta" aria-expanded="false">
+          O que é um treineiro?
+          <span class="mais">+</span>
+        </button>
+        <div class="faq-resposta">
+          É o participante que realiza o exame para conhecer a prova e avaliar seus conhecimentos, mas ainda não concluiu o ensino médio no período exigido para utilizar o resultado nos processos seletivos. Consulte as regras oficiais.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-pergunta" aria-expanded="false">
+          Preciso acertar todas as questões para conseguir uma boa nota?
+          <span class="mais">+</span>
+        </button>
+        <div class="faq-resposta">
+          Não. A nota considera a metodologia TRI nas questões objetivas e a avaliação da redação. O importante é construir uma preparação consistente e buscar melhorar o próprio desempenho.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-pergunta" aria-expanded="false">
+          A nota do ENEM vale para sempre?
+          <span class="mais">+</span>
+        </button>
+        <div class="faq-resposta">
+          A validade depende do processo seletivo ou programa em que o resultado será utilizado. Cada edital informa quais edições do exame são aceitas.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-pergunta" aria-expanded="false">
+          Onde encontro informações oficiais?
+          <span class="mais">+</span>
+        </button>
+        <div class="faq-resposta">
+          No portal do Inep e na Página do Participante. Consulte os editais, comunicados e orientações da edição correspondente.
+        </div>
+      </div>
+    </section>
+
+    <!-- CONCLUSAO -->
+    <section id="conclusao">
+      <div class="quote">
+        “A educação amplia horizontes e transforma possibilidades em caminhos.”
+      </div>
+
+      <div class="secao-titulo" style="margin-top:28px">
+        <h2>O ENEM como caminho para o futuro</h2>
+      </div>
+
+      <div class="intro">
+        O ENEM representa uma etapa importante na trajetória de muitos estudantes brasileiros. Ele pode aproximar os jovens do ensino superior, ajudar na conquista de bolsas e incentivar o desenvolvimento de conhecimentos e habilidades. Entretanto, cada pessoa tem seu próprio ritmo e sua própria história. O resultado de uma prova não define o valor, a inteligência ou todo o potencial de alguém.
+
+        <p>Preparar-se é uma forma de investir no próprio futuro, descobrir interesses e reconhecer que existem diferentes caminhos para alcançar objetivos. Com informação, planejamento e dedicação, o estudante pode aproveitar melhor as oportunidades que surgirem.</p>
+      </div>
+
+      <div class="centralizado" style="margin-top:24px">
+        <a class="botao" href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem" target="_blank" rel="noopener noreferrer">
+          Acessar o portal oficial do ENEM ↗
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <h2>ENEM — Conhecimento que abre caminhos</h2>
+    <p>Trabalho educativo sobre a importância do Exame Nacional do Ensino Médio.</p>
+    <p>Consulte sempre os canais oficiais do Inep para informações atualizadas.</p>
+    <p><a href="#inicio">Voltar ao início</a></p>
+  </footer>
+
+  <button id="topo" aria-label="Voltar ao topo" title="Voltar ao topo">↑</button>
+
+  <script>
+    // ABRIR E FECHAR AS PERGUNTAS FREQUENTES
+    document.querySelectorAll('.faq-pergunta').forEach(function(botao) {
+      botao.addEventListener('click', function() {
+        const item = botao.parentElement;
+
+        item.classList.toggle('aberto');
+
+        botao.setAttribute(
+          'aria-expanded',
+          item.classList.contains('aberto')
+        );
+      });
+    });
+
+    // BOTÃO PARA VOLTAR AO TOPO
+    const topo = document.getElementById('topo');
+
+    window.addEventListener('scroll', function() {
+      topo.style.display = window.scrollY > 350 ? 'block' : 'none';
+    });
+
+    topo.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+
+</body>
+</html>
